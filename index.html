@@ -1,47 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Moja pierwsza strona internetowa</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-        }
-        .underline{
-            text-decoration: underline;
-        }
-    </style>
+    <title>Formularz osobowy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Moja pierwsza strona internetowa</h1>
-    </header>
-    <nav>
-        <a href="subpage.html">Podstrona</a> | 
-        <a href="https://www.example.com">Strona internetowa</a> | 
-        <a href="mailto:example@example.com">Kontakt</a>
-    </nav>
-    <main>
-    <h1>Tekst jest ok, to jest moja pierwsza strona internetowa w jezyku html</h1>
-    To jest pierwsza strona.<br>
-    <p>To jest nowy akapit</p>
-    <b>tekst pogrubiony</b><br>
-    <i>tekst pochylony</i><br>
-    <span class="underline">Tekst porkreślony</span><br>
-    <p style="font-family:'Courier New',monospace;">Ten tekst ma inna czcionke</p>
-    <p><b><i><span class="underline">Łączenie parametrów: podkreslenie pogrubienie kursywa</span></i></b></p>
-    <img src="images/mrau.jpg" alt="Przykładowy obrazek" width="200"><br>
-    <a href="subpage.html">odsyłacz do podstrony</a><br>
-    <a href="https://www.instagram.com">odsyłacz do insta (marlenawojcik1 - zapraszam, daj follow i like)</a><br>
-    <a href="subpage.html"><img src="images/polska.png" alt="odsylacz obrazkowy"></a><br>
-    <button onclick="alert('Kliknięto przycisk!')">Kliknij mnie</button><br>
-    <blockquote>człowiek zadaje sobie jedno pytanie. ma fundamentalne znaczenie. czy mogłem zrobić więcej. no nie bo byłem na granicy fizycznej wytrzymałości.</blockquote>
-    H<sub>2</sub>O - przykład indeksu dolnego<br>
-    X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup> - przykład indeksu górnego
-</main>
-<footer>
-    &copy; 
-</footer>
+    <form name="user_data">
+        <table>
+            <tr><td>imie</td>
+                <td><input type="text" name="imie">
+                <span id="blad_imie" ></span></td>
+            <td>wykształcenie</td>
+            <td>
+                <input name="wyksztalcenie" value="wyksztalcenie_p" checked_type="radio"/>podstawowe</br>
+                <input name="wykształcenie" value="wyksztalcenie_s" type="radio"/>średnie</br>
+                <input name="wyksztalcenie" value="wyksztalcenie_w" type="radio" />wyższe
+            </td>
+        </tr>
+        <tr><td>e-mail</td>
+            <td><input type="text" name="email"><span id="blad_email"></span></td></tr>
+        <tr><td>Kod pocztowy</td><td><input type="text" name="kod"></td></tr>
+20 <tr><td>Wiadomość</td><td><textarea rows="6" cols="17" name="wiadomosc"></textarea>
+21 </td></tr>
+<Tr><td colspan="2"><input type="submit" value="wyslij" onclick="return Weryfikacja(this.form)"></td></Tr>
+        </table>    
+    </form>
+    <script src="code.js"></script>
 </body>
 </html>
